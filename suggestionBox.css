@@ -1,0 +1,244 @@
+.suggestionBox {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 20, .1);
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: .2s;
+}
+
+.suggestionBox:hover {
+    height: 90px;
+    width: 180px;
+    transform: translateY(-15px)
+}
+
+.suggestionBox:hover .balloonImage__suggestionBox {
+    opacity: 0;
+}
+
+.suggestionBox:hover::before {
+    content: "";
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 15px rgba(0, 0, 20, .1);
+}
+
+.suggestionBox:hover .iconsActions__suggestionBox {
+    width: 50px;
+    opacity: 1;
+}
+
+.suggestionBox .balloonImage__suggestionBox {
+    width: 20px;
+    transition: .2s;
+    position: absolute;
+}
+
+.suggestionBox .actionsContainer__suggestionBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s;
+    width: 95%;
+}
+
+.suggestionBox .iconsActions__suggestionBox {
+    width: 40px;
+    transition: .4s;
+    opacity: 0;
+    border: 1px solid #efefef;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(134, 134, 134, 0.05);
+    cursor: pointer;
+}
+
+.suggestionBox .iconsActions__suggestionBox:hover {
+    transform: scale(1.2);
+    background: #ccb7ff2f;
+    border: 1px solid #645bff;
+}
+
+.suggestionBox .iconsActions__suggestionBox:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px #8c00ff2d);
+}
+
+.buttonSend__suggestionBox {
+    --primary-color_suggestionBox: #645bff;
+    --secondary-color_suggestionBox: #fff;
+    --hover-color_suggestionBox: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color_suggestionBox);
+    padding: 1em 1.8em;
+    background: var(--primary-color_suggestionBox);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 0.2s background;
+    transition: 0.2s background;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+.buttonSend__suggestionBox .arrow-wrapper__suggestionBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.buttonSend__suggestionBox .arrow__suggestionBox {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color_suggestionBox);
+    height: var(--arrow-stroke);
+    position: relative;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.buttonSend__suggestionBox .arrow__suggestionBox::before {
+    content: "";
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color_suggestionBox);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    padding: 3px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.buttonSend__suggestionBox:hover {
+    background-color: var(--hover-color_suggestionBox);
+    cursor: pointer;
+}
+
+.buttonSend__suggestionBox:hover .arrow__suggestionBox {
+    background: var(--secondary-color_suggestionBox);
+}
+
+.buttonSend__suggestionBox:hover .arrow__suggestionBox:before {
+    right: 0;
+}
+
+.messageBox__suggestionBox {
+    background-color: #fff;
+    width: 300px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 20, .1);
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: .2s;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+
+.messageBox__suggestionBox .titleContainer__suggestionBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleContainer__suggestionBox #textSuggestion__suggestionBox {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.messageBox__suggestionBox .iconsMessage__suggestionBox {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.textContainer__suggestionBox {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textContainer__suggestionBox #textarea__suggestionBox {
+    width: 270px;
+    height: 60px;
+    border: 1px solid #ccc;
+    outline: none;
+    resize: none;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 20, .1);
+    transition: .2s;
+}
+
+.messageBox__suggestionBox .closeButton__suggestionBox {
+    font-size: 20px;
+    color: #888;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.messageBox__suggestionBox #error_suggestionBox {
+    color: #ff0000;
+    font-size: .8em;
+    margin: 0;
+    display: none;
+}
+
+@media (max-width:385px) {
+    .messageBox__suggestionBox {
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
